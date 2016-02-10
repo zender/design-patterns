@@ -1,4 +1,4 @@
-import {AbstractLogger} from './AbstractLogger';
+import {AbstractLogger} from "./AbstractLogger";
 
 export class ErrorLogger extends AbstractLogger {
 
@@ -7,7 +7,7 @@ export class ErrorLogger extends AbstractLogger {
     this.level = AbstractLogger.ERROR;
   }
 
-  protected write(message: string): string {
-    return 'Error::Logger: ' + message;
+  protected write(message: string): void {
+    console.log('Error::Logger: ' + message);
   }
 }

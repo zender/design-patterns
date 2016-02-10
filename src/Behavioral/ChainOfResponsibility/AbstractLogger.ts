@@ -8,21 +8,21 @@ export abstract class AbstractLogger {
 
   protected level: number;
 
-  protected nextLogger: AbstractLogger;
+  protected nextLogger: AbstractLogger = null;
 
   public setNextLogger(nextLogger: AbstractLogger): void {
     this.nextLogger = nextLogger;
   }
 
-  public logMessage(level: number, message: string): string {
+  public logMessage(level: number, message: string): void {
     if(this.level <= level) {
-      return this.write(message);
+      this.write(message);
     }
 
     if(this.nextLogger !== null) {
-      return this.nextLogger.logMessage(level, message);
+      this.nextLogger.logMessage(level, message);
     }
   }
 
-  protected abstract write(message: string): string;
+  protected abstract write(message: string): void;
 }
