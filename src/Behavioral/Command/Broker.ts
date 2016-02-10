@@ -13,6 +13,5 @@ export class Broker {
       var order = this.orderList.pop();
       order.execute();
     }
-
   }
 }

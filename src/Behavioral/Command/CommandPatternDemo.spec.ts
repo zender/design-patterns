@@ -15,15 +15,15 @@ export function main() {
     let sellStockOrder: SellStock = new SellStock(abcStock);
     let broker: Broker = new Broker();
 
-    it('Should take buy order.', () => {
+    it('Should take buy stock order.', () => {
       broker.takeOrder(buyStockOrder);
     });
 
-    it('Should take sell order.', () => {
+    it('Should take sell stock order.', () => {
       broker.takeOrder(sellStockOrder);
     });
 
-    it('Should place orders.', () => {
+    it('Should place stock orders.', () => {
       broker.placeOrders();
     });
   });
