@@ -1,13 +1,13 @@
-import {AbstractLogger} from './AbstractLogger';
+import {AbstractLogger} from "./AbstractLogger";
 
 export class ConsoleLogger extends AbstractLogger {
 
-    public constructor() {
-      super();
-      this.level = AbstractLogger.INFO;
-    }
+  public constructor() {
+    super();
+    this.level = AbstractLogger.INFO;
+  }
 
-    protected write(message: string): string {
-        return 'Standard::Logger: ' + message;
-    }
+  protected write(message: string): void {
+    console.log('Standard::Logger: ' + message);
+  }
 }

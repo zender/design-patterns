@@ -18,7 +18,7 @@ git clone --depth 1 https://github.com/zender/design-patterns.git
 cd design-patterns
 ```
 
-## install the project's dependencies
+## Install the project's dependencies
 
 ```bash
 npm install
