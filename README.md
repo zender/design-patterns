@@ -13,7 +13,7 @@ npm install -g ts-node
 ```
 
 ```bash
-git clone --depth 1 https://github.com/zender/design-patterns.git
+git clone  https://github.com/zender/design-patterns.git
 
 cd design-patterns
 ```
