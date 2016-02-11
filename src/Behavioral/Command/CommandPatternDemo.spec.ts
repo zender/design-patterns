@@ -1,6 +1,7 @@
 import {
   describe,
   it,
+  expect,
 } from "angular2/testing";
 import {Stock} from "./Stock";
 import {BuyStock} from "./BuyStock";
@@ -16,13 +17,18 @@ describe('Command', () => {
 
   it('Should take buy stock order.', () => {
     broker.takeOrder(buyStockOrder);
+    expect(broker.getOrders().length).toEqual(1);
   });
 
   it('Should take sell stock order.', () => {
     broker.takeOrder(sellStockOrder);
+    expect(broker.getOrders().length).toEqual(2);
   });
 
   it('Should place stock orders.', () => {
     broker.placeOrders();
+    expect(broker.getOrders().length).toEqual(0);
+    expect(abcStock.isSold()).toEqual(true);
+    expect(abcStock.isBought()).toEqual(true);
   });
 });

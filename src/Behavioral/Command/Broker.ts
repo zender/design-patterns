@@ -8,6 +8,10 @@ export class Broker {
     this.orderList.push(order);
   }
 
+  public getOrders(): Array<OrderInterface> {
+    return this.orderList;
+  }
+
   public placeOrders(): void {
     while (this.orderList.length > 0) {
       var order = this.orderList.pop();

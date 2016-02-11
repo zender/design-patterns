@@ -8,6 +8,6 @@ export class ConsoleLogger extends AbstractLogger {
   }
 
   protected write(message: string): void {
-    console.log('Standard::Logger: ' + message);
+    AbstractLogger.messages.push('ConsoleLogger: ' + message);
   }
 }

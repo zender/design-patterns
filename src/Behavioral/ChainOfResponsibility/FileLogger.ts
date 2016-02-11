@@ -8,6 +8,6 @@ export class FileLogger extends AbstractLogger {
   }
 
   protected write(message: string): void {
-    console.log('File::Logger: ' + message);
+    AbstractLogger.messages.push('FileLogger: ' + message);
   }
 }

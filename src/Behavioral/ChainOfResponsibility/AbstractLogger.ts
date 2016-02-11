@@ -6,6 +6,8 @@ export abstract class AbstractLogger {
 
   public static ERROR: number = 3;
 
+  public static messages: Array<string> = new Array();
+
   protected level: number;
 
   protected nextLogger: AbstractLogger = null;

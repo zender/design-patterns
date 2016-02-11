@@ -1,14 +1,22 @@
 export class Stock {
 
-  private name: string= 'ABC';
+  private sold: boolean = false;
 
-  private quantity: number = 10;
+  private bought: boolean = false;
 
   public buy(): void {
-    console.log('Stock [ Name: '+ this.name +' Quantity: ' + this.quantity +' bought');
+    this.bought = true;
   }
 
   public sell(): void {
-    console.log('Stock [ Name: '+ this.name + ' Quantity: ' + this.quantity +' ] sold');
+    this.sold = true;
+  }
+
+  public isSold(): boolean {
+    return this.sold;
+  }
+
+  public isBought(): boolean {
+    return this.bought;
   }
 }
