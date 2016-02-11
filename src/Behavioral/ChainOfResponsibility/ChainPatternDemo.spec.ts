@@ -10,31 +10,29 @@ import {AbstractLogger} from "./AbstractLogger";
 
 function getChainOfLoggers() {
 
-  let consoleLogger: AbstractLogger = new ConsoleLogger();
-  let errorLogger: AbstractLogger = new ErrorLogger();
-  let fileLogger: AbstractLogger = new FileLogger();
+    let consoleLogger: AbstractLogger = new ConsoleLogger();
+    let errorLogger: AbstractLogger = new ErrorLogger();
+    let fileLogger: AbstractLogger = new FileLogger();
 
-  errorLogger.setNextLogger(fileLogger);
-  fileLogger.setNextLogger(consoleLogger);
+    errorLogger.setNextLogger(fileLogger);
+    fileLogger.setNextLogger(consoleLogger);
 
-  return errorLogger;
+    return errorLogger;
 }
 
-export function main() {
-  describe('ChainOfResponsibility', () => {
+describe('ChainOfResponsibility', () => {
 
     let chainLogger: AbstractLogger = getChainOfLoggers();
 
     it('Should log INFO', () => {
-      chainLogger.logMessage(AbstractLogger.INFO, 'INFO');
+        chainLogger.logMessage(AbstractLogger.INFO, 'INFO');
     });
 
     it('Should log DEBUG', () => {
-      chainLogger.logMessage(AbstractLogger.ERROR, 'DEBUG');
+        chainLogger.logMessage(AbstractLogger.ERROR, 'DEBUG');
     });
 
     it('Should log ERROR', () => {
-      chainLogger.logMessage(AbstractLogger.DEBUG, 'ERROR');
+        chainLogger.logMessage(AbstractLogger.DEBUG, 'ERROR');
     });
-  });
-}
+});
