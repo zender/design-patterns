@@ -2,18 +2,33 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "declaration": false,
-        "noImplicitAny": false,
-        "removeComments": true,
-        "noLib": false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true
+        "noResolve": false,
+        "declaration": true,
+        "diagnostics": true,
+        "listFiles": true
     },
     "exclude": [
         "node_modules",
-        "typings/browser.d.ts",
-        "typings/browser/**"
+        "typings/main.d.ts",
+        "typings/main"
     ],
-    "compileOnSave": false
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./test/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "src/custom_typings.d.ts",
+        "typings/browser.d.ts"
+    ],
+    "compileOnSave": false,
+    "files": [
+        "./src/Behavioral/ChainOfResponsibility/AbstractLogger.ts",
+        "./src/Behavioral/ChainOfResponsibility/ChainPatternDemo.spec.ts",
+        "./src/Behavioral/ChainOfResponsibility/ConsoleLogger.ts",
+        "./src/Behavioral/ChainOfResponsibility/ErrorLogger.ts",
+        "./src/Behavioral/ChainOfResponsibility/FileLogger.ts",
+        "typings/browser.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
