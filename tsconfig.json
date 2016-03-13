@@ -24,18 +24,6 @@
         "rewriteTsconfig": true
     },
     "files": [
-        "./src/Behavioral/ChainOfResponsibility/AbstractPurchasePower.ts",
-        "./src/Behavioral/ChainOfResponsibility/ManagerPurchasePower.ts",
-        "./src/Behavioral/ChainOfResponsibility/DirectorPurchasePower.ts",
-        "./src/Behavioral/ChainOfResponsibility/PresidentPurchasePower.ts",
-        "./src/Behavioral/ChainOfResponsibility/PurchaseRequest.ts",
-        "./src/Behavioral/ChainOfResponsibility/ChainPatternDemo.spec.ts",
-        "./src/Behavioral/Command/Broker.ts",
-        "./src/Behavioral/Command/BuyStock.ts",
-        "./src/Behavioral/Command/CommandPatternDemo.spec.ts",
-        "./src/Behavioral/Command/OrderInterface.ts",
-        "./src/Behavioral/Command/SellStock.ts",
-        "./src/Behavioral/Command/Stock.ts",
         "typings/browser.d.ts"
     ]
 }

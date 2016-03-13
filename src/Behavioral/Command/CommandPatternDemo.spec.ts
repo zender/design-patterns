@@ -3,32 +3,31 @@ import {
   it,
   expect,
 } from "angular2/testing";
-import {Stock} from "./Stock";
-import {BuyStock} from "./BuyStock";
-import {SellStock} from "./SellStock";
-import {Broker} from "./Broker";
+import {CommandFactory} from "./CommandFactory";
 
 describe('Command', () => {
 
-  let abcStock: Stock = new Stock();
-  let buyStockOrder: BuyStock = new BuyStock(abcStock);
-  let sellStockOrder: SellStock = new SellStock(abcStock);
-  let broker: Broker = new Broker();
+  let cf: CommandFactory = CommandFactory.init();
 
-  it('Should take buy stock order.', () => {
-    broker.takeOrder(buyStockOrder);
-    expect(broker.getOrders().length).toEqual(1);
+  it('Should not find  command.', () => {
+    expect(function () {
+      cf.execute('Unknown');
+    }).toThrow(new Error('Command Unknown not found'));
+
   });
 
-  it('Should take sell stock order.', () => {
-    broker.takeOrder(sellStockOrder);
-    expect(broker.getOrders().length).toEqual(2);
+  it('Should execute Light On command.', () => {
+    cf.execute('Light On');
+    expect(cf.getCommand('Light On').isExecuted()).toEqual(true);
   });
 
-  it('Should place stock orders.', () => {
-    broker.placeOrders();
-    expect(broker.getOrders().length).toEqual(0);
-    expect(abcStock.isSold()).toEqual(true);
-    expect(abcStock.isBought()).toEqual(true);
+  it('Should execute Light Off command.', () => {
+    cf.execute('Light Off');
+    expect(cf.getCommand('Light Off').isExecuted()).toEqual(true);
+  });
+
+  it('Should list commands.', () => {
+    expect(cf.listCommands().length).toEqual(2);
+    expect(cf.listCommands()).toEqual(['Light On', 'Light Off']);
   });
 });

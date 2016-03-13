@@ -45,7 +45,7 @@ The patterns can be structured in roughly three different categories. Please cli
 ## [Behavioral](Behavioral)
 
 * [ChainOfResponsibilities](/src/Behavioral/ChainOfResponsibility/index.md)
-* [ChainOfResponsibilities](/src/Behavioral/Command/index.md)
+* [Command](/src/Behavioral/Command/index.md)
 
 ## Contribute
 
