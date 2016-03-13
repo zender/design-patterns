@@ -14,22 +14,24 @@ If one object cannot handle the request then it passes the same to the next rece
 Implementation:
 ---------------
 
-We have created an abstract class AbstractLogger with a level of logging. Then we have created three types of loggers extending 
-the AbstractLogger. Each logger checks the level of message to its level and print accordingly otherwise does not print 
-and pass the message to its next logger.
+In this example we have different roles, each having a fixed purchasing limit and a successor. 
+Every time a user in a role receives a purchase request that exceeds his or her limit, 
+the request is passed to his or her successor.
 
-[more](http://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm)
+The PurchasePower abstract class with the abstract method processRequest.
 
 Files:
 ------
 
-[AbstractLogger](AbstractLogger.ts)
+[AbstractPurchasePower](AbstractPurchasePower.ts)
 
-[ConsoleLogger](ConsoleLogger.ts)
+[ManagerPurchasePower](ManagerPurchasePower.ts)
 
-[ErrorLogger](ErrorLogger.ts)
+[DirectorPurchasePower](DirectorPurchasePower.ts)
 
-[FileLogger](FileLogger.ts)
+[PresidentPurchasePower](PresidentPurchasePower.ts)
+
+[PurchaseRequest](PurchaseRequest.ts)
 
 [Demo](ChainPatternDemo.spec.ts)
 

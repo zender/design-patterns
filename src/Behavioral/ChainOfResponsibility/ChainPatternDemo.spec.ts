@@ -2,53 +2,51 @@ import {
   describe,
   it,
   expect,
-  afterEach
 } from "angular2/testing";
 
-import {ConsoleLogger} from "./ConsoleLogger";
-import {ErrorLogger} from "./ErrorLogger";
-import {FileLogger} from "./FileLogger";
-import {AbstractLogger} from "./AbstractLogger";
+import {AbstractPurchasePower} from "./AbstractPurchasePower";
+import {ManagerPurchasePower} from "./ManagerPurchasePower";
+import {DirectorPurchasePower} from "./DirectorPurchasePower";
+import {PresidentPurchasePower} from "./PresidentPurchasePower";
+import {PurchaseRequest} from "./PurchaseRequest";
 
-function getChainOfLoggers() {
+function getInitiator() {
 
-  let consoleLogger: AbstractLogger = new ConsoleLogger();
-  let errorLogger: AbstractLogger = new ErrorLogger();
-  let fileLogger: AbstractLogger = new FileLogger();
+  let manager: AbstractPurchasePower = new ManagerPurchasePower();
+  let director: AbstractPurchasePower = new DirectorPurchasePower();
+  let president: AbstractPurchasePower = new PresidentPurchasePower();
 
-  errorLogger.setNextLogger(fileLogger);
-  fileLogger.setNextLogger(consoleLogger);
+  manager.setSuccessor(director);
+  director.setSuccessor(president);
 
-  return errorLogger;
+  return manager;
 }
 
 describe('ChainOfResponsibility', () => {
 
-  let chainLogger: AbstractLogger = getChainOfLoggers();
+  let initiator: AbstractPurchasePower = getInitiator();
 
-  afterEach(function() {
-    AbstractLogger.messages = [];
+  it('Should be approved by manager', () => {
+    let request = new PurchaseRequest(8000);
+    initiator.processRequest(request);
+    expect(request.getApprovedBy() instanceof ManagerPurchasePower).toEqual(true);
   });
 
-  it('Should log INFO', () => {
-    chainLogger.logMessage(AbstractLogger.INFO, 'INFO');
-    expect(AbstractLogger.messages).toEqual(['ConsoleLogger: INFO']);
+  it('Should be approved by director', () => {
+    let request = new PurchaseRequest(16000);
+    initiator.processRequest(request);
+    expect(request.getApprovedBy() instanceof DirectorPurchasePower).toEqual(true);
   });
 
-  it('Should log DEBUG', () => {
-    chainLogger.logMessage(AbstractLogger.ERROR, 'DEBUG');
-    expect(AbstractLogger.messages).toEqual([
-      'ErrorLogger: DEBUG',
-      'FileLogger: DEBUG',
-      'ConsoleLogger: DEBUG'
-    ]);
+  it('Should be approved by president', () => {
+    let request = new PurchaseRequest(26000);
+    initiator.processRequest(request);
+    expect(request.getApprovedBy() instanceof PresidentPurchasePower).toEqual(true);
   });
 
-  it('Should log ERROR', () => {
-    chainLogger.logMessage(AbstractLogger.DEBUG, 'ERROR');
-    expect(AbstractLogger.messages).toEqual([
-      'FileLogger: ERROR',
-      'ConsoleLogger: ERROR'
-    ]);
+  it('Should be not approved', () => {
+    let request = new PurchaseRequest(50000);
+    initiator.processRequest(request);
+    expect(request.getApprovedBy()).toBeNull();
   });
 });

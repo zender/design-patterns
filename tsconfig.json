@@ -24,11 +24,12 @@
         "rewriteTsconfig": true
     },
     "files": [
-        "./src/Behavioral/ChainOfResponsibility/AbstractLogger.ts",
+        "./src/Behavioral/ChainOfResponsibility/AbstractPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/ManagerPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/DirectorPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/PresidentPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/PurchaseRequest.ts",
         "./src/Behavioral/ChainOfResponsibility/ChainPatternDemo.spec.ts",
-        "./src/Behavioral/ChainOfResponsibility/ConsoleLogger.ts",
-        "./src/Behavioral/ChainOfResponsibility/ErrorLogger.ts",
-        "./src/Behavioral/ChainOfResponsibility/FileLogger.ts",
         "./src/Behavioral/Command/Broker.ts",
         "./src/Behavioral/Command/BuyStock.ts",
         "./src/Behavioral/Command/CommandPatternDemo.spec.ts",
