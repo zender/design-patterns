@@ -2,7 +2,7 @@ import {PurchaseRequest} from "./PurchaseRequest";
 
 export abstract class AbstractPurchasePower {
 
-  protected static BASE: number = 500;
+  protected static BASE: number = 500.00;
 
   protected successor: AbstractPurchasePower = null;
 
