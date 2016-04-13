@@ -2,14 +2,13 @@ import {ExpressionInterface} from "./ExpressionInterface";
 import {Plus} from "./Plus";
 import {Minus} from "./Minus";
 import {Variable} from "./Variable";
-import {StringMapWrapper} from "angular2/src/facade/collection";
 
 export class Evaluator implements ExpressionInterface {
 
   private syntaxTree: ExpressionInterface;
 
   public constructor(expression: string) {
-  new StringMapWrapper()
+
     var expressionStack: Array<ExpressionInterface> = new Array();
 
     expression.split(' ').forEach(function(token: string){
