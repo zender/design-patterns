@@ -2,13 +2,13 @@ import {
   describe,
   it,
   expect,
-} from "angular2/testing";
+} from 'angular2/testing';
 
-import {AbstractPurchasePower} from "./AbstractPurchasePower";
-import {ManagerPurchasePower} from "./ManagerPurchasePower";
-import {DirectorPurchasePower} from "./DirectorPurchasePower";
-import {PresidentPurchasePower} from "./PresidentPurchasePower";
-import {PurchaseRequest} from "./PurchaseRequest";
+import {AbstractPurchasePower} from './AbstractPurchasePower';
+import {ManagerPurchasePower} from './ManagerPurchasePower';
+import {DirectorPurchasePower} from './DirectorPurchasePower';
+import {PresidentPurchasePower} from './PresidentPurchasePower';
+import {PurchaseRequest} from './PurchaseRequest';
 
 function getInitiator() {
 

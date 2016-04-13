@@ -1,6 +1,6 @@
-import {AbstractPurchasePower} from "./AbstractPurchasePower";
+import {AbstractPurchasePower} from './AbstractPurchasePower';
 
-import {PurchaseRequest} from "./PurchaseRequest";
+import {PurchaseRequest} from './PurchaseRequest';
 
 export class DirectorPurchasePower extends AbstractPurchasePower {
 

@@ -1,4 +1,4 @@
-import {AbstractPurchasePower} from "./AbstractPurchasePower";
+import {AbstractPurchasePower} from './AbstractPurchasePower';
 export class PurchaseRequest {
 
   protected amount: number = 0.0;

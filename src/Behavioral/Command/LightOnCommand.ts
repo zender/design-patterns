@@ -1,4 +1,4 @@
-import {CommandInterface} from "./CommandInterface";
+import {CommandInterface} from './CommandInterface';
 
 export class LightOnCommand implements CommandInterface {
 

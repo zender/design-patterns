@@ -2,8 +2,8 @@ import {
   describe,
   it,
   expect,
-} from "angular2/testing";
-import {CommandFactory} from "./CommandFactory";
+} from 'angular2/testing';
+import {CommandFactory} from './CommandFactory';
 
 describe('Command', () => {
 

@@ -2,19 +2,19 @@ import {
   describe,
   it,
   expect,
-} from "angular2/testing";
-import {ExpressionInterface} from "./ExpressionInterface";
-import {Evaluator} from "./Evaluator";
-import {Number} from "./Number";
+} from 'angular2/testing';
+import {ExpressionInterface} from './ExpressionInterface';
+import {Evaluator} from './Evaluator';
+import {Number as Num} from './Number';
 
 describe('Interpreter', () => {
 
-  let expression: string = "w x z - +";
+  let expression: string = 'w x z - +';
   let evaluator: ExpressionInterface = new Evaluator(expression);
-  let variables: Map<string, ExpressionInterface> = new Map();
-  variables.set('w', new Number(5));
-  variables.set('x', new Number(10));
-  variables.set('z', new Number(42));
+  let variables: Map<string, Num> = new Map<string, Num>();
+  variables.set('w', new Num(5));
+  variables.set('x', new Num(10));
+  variables.set('z', new Num(42));
 
   it('Should interpret string', () => {
     var result = evaluator.interpret(variables);

@@ -1,4 +1,4 @@
-import {ExpressionInterface} from "./ExpressionInterface";
+import {ExpressionInterface} from './ExpressionInterface';
 
 export class Minus implements ExpressionInterface {
 

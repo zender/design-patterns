@@ -1,5 +1,5 @@
-import {AbstractPurchasePower} from "./AbstractPurchasePower";
-import {PurchaseRequest} from "./PurchaseRequest";
+import {AbstractPurchasePower} from './AbstractPurchasePower';
+import {PurchaseRequest} from './PurchaseRequest';
 
 export class ManagerPurchasePower extends AbstractPurchasePower {
 

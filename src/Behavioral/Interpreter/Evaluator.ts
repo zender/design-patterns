@@ -1,7 +1,7 @@
-import {ExpressionInterface} from "./ExpressionInterface";
-import {Plus} from "./Plus";
-import {Minus} from "./Minus";
-import {Variable} from "./Variable";
+import {ExpressionInterface} from './ExpressionInterface';
+import {Plus} from './Plus';
+import {Minus} from './Minus';
+import {Variable} from './Variable';
 
 export class Evaluator implements ExpressionInterface {
 
@@ -12,7 +12,7 @@ export class Evaluator implements ExpressionInterface {
     var expressionStack: Array<ExpressionInterface> = new Array();
 
     expression.split(' ').forEach(function(token: string){
-      if(token === '+'){
+      if(token === '+') {
         var subExpression: ExpressionInterface = new Plus(expressionStack.pop(), expressionStack.pop());
         expressionStack.push(subExpression);
       } else if (token === '-') {

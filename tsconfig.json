@@ -24,6 +24,24 @@
         "rewriteTsconfig": true
     },
     "files": [
+        "./src/Behavioral/ChainOfResponsibility/AbstractPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/ChainPatternDemo.spec.ts",
+        "./src/Behavioral/ChainOfResponsibility/DirectorPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/ManagerPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/PresidentPurchasePower.ts",
+        "./src/Behavioral/ChainOfResponsibility/PurchaseRequest.ts",
+        "./src/Behavioral/Command/CommandFactory.ts",
+        "./src/Behavioral/Command/CommandInterface.ts",
+        "./src/Behavioral/Command/CommandPatternDemo.spec.ts",
+        "./src/Behavioral/Command/LightOffCommand.ts",
+        "./src/Behavioral/Command/LightOnCommand.ts",
+        "./src/Behavioral/Interpreter/Evaluator.ts",
+        "./src/Behavioral/Interpreter/ExpressionInterface.ts",
+        "./src/Behavioral/Interpreter/InterpreterPatternDemo.spec.ts",
+        "./src/Behavioral/Interpreter/Minus.ts",
+        "./src/Behavioral/Interpreter/Number.ts",
+        "./src/Behavioral/Interpreter/Plus.ts",
+        "./src/Behavioral/Interpreter/Variable.ts",
         "typings/browser.d.ts"
     ]
 }

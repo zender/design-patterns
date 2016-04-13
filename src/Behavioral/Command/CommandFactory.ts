@@ -1,6 +1,6 @@
-import {CommandInterface} from "./CommandInterface";
-import {LightOnCommand} from "./LightOnCommand";
-import {LightOffCommand} from "./LightOffCommand";
+import {CommandInterface} from './CommandInterface';
+import {LightOnCommand} from './LightOnCommand';
+import {LightOffCommand} from './LightOffCommand';
 
 export class CommandFactory {
 

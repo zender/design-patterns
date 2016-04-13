@@ -1,4 +1,4 @@
-import {PurchaseRequest} from "./PurchaseRequest";
+import {PurchaseRequest} from './PurchaseRequest';
 
 export abstract class AbstractPurchasePower {
 
