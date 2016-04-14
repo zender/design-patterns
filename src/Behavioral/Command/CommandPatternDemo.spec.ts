@@ -8,7 +8,7 @@ import {CommandFactory} from './CommandFactory';
 export function main() {
   describe('Command', () => {
 
-    let cf:CommandFactory = CommandFactory.init();
+    let cf: CommandFactory = CommandFactory.init();
 
     it('Should not find  command.', () => {
       expect(function () {

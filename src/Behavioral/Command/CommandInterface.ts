@@ -1,8 +1,8 @@
 export interface CommandInterface {
 
-  getName():string;
+  getName(): string;
 
-  apply():void;
+  apply(): void;
 
-  isExecuted():boolean;
+  isExecuted(): boolean;
 }

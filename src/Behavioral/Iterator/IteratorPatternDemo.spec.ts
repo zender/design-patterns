@@ -8,7 +8,7 @@ import {DemoRepository} from './DemoRepository';
 export function main() {
   describe('Iterator', () => {
 
-    let repository:DemoRepository<number> = new DemoRepository<number>(
+    let repository: DemoRepository<number> = new DemoRepository<number>(
       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     );
     let iterator = repository.getIterator();

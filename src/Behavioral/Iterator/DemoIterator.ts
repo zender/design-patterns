@@ -1,10 +1,10 @@
 import {Iterator} from './IteratorInterface';
 
 export class DemoIterator<T> implements Iterator<T> {
-  private index:number;
-  private items:Array<T>;
+  private index: number;
+  private items: Array<T>;
 
-  constructor(items:Array<T>) {
+  constructor(items: Array<T>) {
     this.items = items;
     this.index = 0;
   }
@@ -18,7 +18,7 @@ export class DemoIterator<T> implements Iterator<T> {
   }
 
   public next() {
-    let item:any = null;
+    let item: any = null;
 
     if (this.hasNext() === true) {
       this.index = this.index + 1;

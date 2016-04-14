@@ -6,7 +6,7 @@ export class DirectorPurchasePower extends AbstractPurchasePower {
 
   private static ALLOWABLE = AbstractPurchasePower.BASE * 40;
 
-  public processRequest(request:PurchaseRequest):void {
+  public processRequest(request: PurchaseRequest): void {
     if (request.getAmount() <= DirectorPurchasePower.ALLOWABLE) {
       request.setApprovedBy(this);
     } else if (this.successor !== null) {
