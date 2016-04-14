@@ -41,11 +41,12 @@ The patterns can be structured in roughly three different categories. Please cli
 ## [Structural](Structural)
 
 
-
 ## [Behavioral](Behavioral)
 
 * [ChainOfResponsibilities](/src/Behavioral/ChainOfResponsibility/index.md)
 * [Command](/src/Behavioral/Command/index.md)
+* [Interpreter](/src/Behavioral/Interpreter/index.md)
+* [Iterator](/src/Behavioral/Iterator/index.md)
 
 ## Contribute
 

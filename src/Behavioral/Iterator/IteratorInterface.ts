@@ -1,5 +1,5 @@
 export interface Iterator<T> {
-    current_item(): T;
-    hasNext(): boolean;
-    next(): T;
+  currentItem():T;
+  hasNext():boolean;
+  next():T;
 }

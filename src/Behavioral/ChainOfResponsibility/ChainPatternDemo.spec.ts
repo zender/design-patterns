@@ -12,9 +12,9 @@ import {PurchaseRequest} from './PurchaseRequest';
 
 function getInitiator() {
 
-  let manager: AbstractPurchasePower = new ManagerPurchasePower();
-  let director: AbstractPurchasePower = new DirectorPurchasePower();
-  let president: AbstractPurchasePower = new PresidentPurchasePower();
+  let manager:AbstractPurchasePower = new ManagerPurchasePower();
+  let director:AbstractPurchasePower = new DirectorPurchasePower();
+  let president:AbstractPurchasePower = new PresidentPurchasePower();
 
   manager.setSuccessor(director);
   director.setSuccessor(president);
@@ -25,7 +25,7 @@ function getInitiator() {
 export function main() {
   describe('ChainOfResponsibility', () => {
 
-    let initiator: AbstractPurchasePower = getInitiator();
+    let initiator:AbstractPurchasePower = getInitiator();
 
     it('Should be approved by manager', () => {
       let request = new PurchaseRequest(8000);
