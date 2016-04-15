@@ -4,7 +4,8 @@ export class PurchaseRequest {
 
   protected approvedBy: AbstractPurchasePower = null;
 
-  public constructor(protected amount: number) {}
+  public constructor(protected amount: number) {
+  }
 
   public getAmount(): number {
     return this.amount;

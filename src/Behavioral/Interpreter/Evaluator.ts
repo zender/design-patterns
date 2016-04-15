@@ -11,8 +11,8 @@ export class Evaluator implements ExpressionInterface {
 
     var expressionStack: Array<ExpressionInterface> = new Array();
 
-    expression.split(' ').forEach(function(token: string){
-      if(token === '+') {
+    expression.split(' ').forEach(function (token: string) {
+      if (token === '+') {
         var subExpression: ExpressionInterface = new Plus(expressionStack.pop(), expressionStack.pop());
         expressionStack.push(subExpression);
       } else if (token === '-') {

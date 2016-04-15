@@ -19,7 +19,7 @@ export class CommandFactory {
   }
 
   public getCommand(name: string): CommandInterface {
-    return this.commands.find(function(command: CommandInterface) {
+    return this.commands.find(function (command: CommandInterface) {
       return command.getName() === name;
     });
   }
@@ -27,7 +27,7 @@ export class CommandFactory {
   public execute(name: string): void {
     var command = this.getCommand(name);
 
-    if(command === undefined) {
+    if (command === undefined) {
       throw new Error('Command %name% not found'.replace('%name%', name));
     }
 
@@ -35,7 +35,7 @@ export class CommandFactory {
   }
 
   public listCommands(): Array<string> {
-    return this.commands.map(function(command: CommandInterface) {
+    return this.commands.map(function (command: CommandInterface) {
       return command.getName();
     });
   }
